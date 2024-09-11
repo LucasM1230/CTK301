@@ -1,0 +1,135 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+/* Styling for Links */
+a.nav-link {
+    color: red; /* Default link color */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a.nav-link:hover {
+    color: yellow; /* Hover link color */
+}
+
+a.nav-link:visited {
+    color: green; /* Visited link color */
+}
+
+/* Header Styling */
+.site-header {
+    background-color: #0044cc; /* Blue background */
+    color: white;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 5px solid #003399;
+}
+
+.page-title {
+    font-size: 36px;
+    margin: 0;
+}
+
+/* Image Styling */
+#header-image {
+    max-width: 100%;
+    height: auto;
+    margin-top: 20px;
+    border-radius: 10px;
+}
+
+/* Navigation Bar Styling */
+.main-navigation {
+    background-color: #003366;
+    padding: 10px 0;
+    text-align: center;
+}
+
+.nav-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-list li {
+    display: inline;
+    margin-right: 15px;
+}
+
+.nav-link {
+    color: #ffffff;
+    font-size: 18px;
+}
+
+.nav-link:hover {
+    color: #ffcc00;
+    text-decoration: underline;
+}
+
+/* Main Content Styling */
+.content-main {
+    background-color: #ffffff;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 900px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.section-heading {
+    font-size: 28px;
+    color: #0044cc;
+    margin-bottom: 15px;
+}
+
+/* Styling for Courses and Descriptions */
+.course-heading, .requirement-heading {
+    font-size: 24px;
+    color: #0066ff;
+    margin-top: 20px;
+}
+
+.course-title, .requirement-description {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.course-description, .sequence-description {
+    font-size: 16px;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Footer Styling */
+.site-footer {
+    background-color: #003366;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+.footer-text {
+    margin: 0;
+    font-size: 14px;
+}
+
+/* Styling for Span */
+#highlight-text {
+    color: #ff6600;
+    font-weight: bold;
+}
+
+/* Styling for Div */
+.program-description {
+    background-color: #e6f2ff;
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
