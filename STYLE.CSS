@@ -1,0 +1,114 @@
+body {
+    font-family: 'Times New Roman', serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background-color: #f0f0f8;
+  }
+  
+  header {
+    background-color: #d3d3f3;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  h1 {
+    margin: 0;
+    font-size: 32px;
+    color: white;
+  }
+  
+  h2 {
+    color: #1a2b8c;
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  h3.highlight-yellow {
+    color: black;
+    background-color: yellow;
+    width: 80%;
+    margin: 0 auto;
+    padding: 5px;
+  }
+  
+  h4.highlight-green {
+    color: yellow;
+    background-color: green;
+    width: 80%;
+    margin: 0 auto;
+    padding: 5px;
+  }
+  
+  h5 {
+    color: #FF4500;
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  a {
+    color: green;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    color: red;
+    text-decoration: underline;
+  }
+  
+  .center-image {
+    width: 100%;
+    max-width: 800px;
+    display: block;
+    margin: 20px auto;
+  }
+  
+  p {
+    width: 80%;
+    margin: 0 auto 15px;
+    color: black;
+  }
+  
+  p.highlight-yellow {
+    background-color: yellow;
+    width: 80%;
+    padding: 10px;
+    margin: 0 auto 15px;
+    color: black;
+  }
+  
+  p.highlight-green {
+    background-color: green;
+    color: black;
+    padding: 10px;
+    margin: 0 auto 15px;
+  }
+  
+  ul, ol {
+    width: 80%;
+    margin: 0 auto 15px;
+    padding-left: 40px;
+  }
+  
+  .highlight-orange {
+    color: #FF8C00;
+    font-weight: bold;
+  }
+  
+  .highlight-red {
+    color: #b30000;
+    font-weight: bold;
+  }
+  
+  footer {
+    background-color: #f0f0f0;
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px;
+  }
+  
+  .left-align {
+    text-align: left;
+    width: 80%;
+    margin: 0 auto;
+  }
