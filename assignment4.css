@@ -1,0 +1,51 @@
+/* Set font for the entire page to Helvetica or Arial */
+body {
+  font-family: Helvetica, Arial, sans-serif;
+  background-image: url('mtfuji.jpg'); /* Add a background image */
+  background-size: cover;
+  background-position: center;
+  margin: 0;
+  padding: 20px;
+}
+
+/* Center one paragraph of text */
+.center-text {
+  text-align: center;
+}
+
+/* Justify one paragraph of text */
+.justify-text {
+  text-align: justify;
+}
+
+/* Style all headers */
+h1, h2, h3, h4, h5, h6 {
+  color: orange;
+  font-style: italic;
+  font-weight: normal; /* Normal weight (not bold) */
+}
+
+/* Add a black border and yellow padding to all images */
+.styled-image {
+  border: 10px solid black;    /* Black border */
+  padding: 10px;               /* Yellow padding between the image and border */
+  background-color: yellow;     /* Yellow background between the image and border */
+  display: block;
+  margin: 20px auto;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Footer styling */
+footer {
+  text-align: center;
+  margin-top: 40px;
+  padding: 10px;
+  background-color: #f0f0f0;
+}
+
+/* Ensure consistent margins and padding for paragraphs and sections */
+p {
+  margin: 0 auto 15px;
+  width: 80%;
+}
