@@ -1,0 +1,83 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: url('57312965_9400774.jpg');
+    background-repeat: repeat;
+}
+
+#wrapper {
+    margin: 1em auto;
+    padding: 0%;
+    width: 960px;
+    border: 2px solid black;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    background-color: white;
+}
+header {
+   color: white;
+    background-color: blue;
+    font-family: Arial, sans-serif;
+    
+    padding: 1em;
+    grid-column:  span 5;
+
+}
+nav {
+    grid-column: span 5;
+   
+}
+nav ul{
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    padding: 0;
+    
+}
+nav li {
+    margin: 5px;
+    width: 150px;
+}
+nav li a {
+    display: block;
+    background-color: green;
+    border: 2px solid black;
+    padding: 1em;
+    color: white;
+    text-decoration: none;
+}
+nav li a:hover {
+    background-color: darkgreen;
+}
+
+main {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: justify;
+    padding: 1em;
+    grid-column: span 3;
+}
+.img {
+    float: right;
+    padding:0;
+    width: 150px;
+    margin: 1em;
+    
+}
+footer {
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: normal;
+    background-color: blue;
+    grid-column: span 5;
+    border-top: 2px solid black;
+    padding: 10px;
+}
+aside{
+    grid-column: span 2;
+    border: 1px solid black;
+    
+    margin-right: 10px;
+    margin-bottom: 10px;
+    background-color: rgb(104, 104, 169);
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    padding:10px;
+}
