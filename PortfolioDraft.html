@@ -4,9 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lucas M - Portfolio</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Roboto', Arial, sans-serif;
             margin: 0;
             padding: 0;
             background-color: #001f3f; /* Dark Blue */
@@ -48,8 +52,12 @@
             background-color: #004225; /* Dark Green */
             padding: 20px;
             border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Drop shadow */
+            transition: transform 0.3s ease; /* Smooth transition */
             text-align: center;
+        }
+        .project:hover {
+            transform: scale(1.05); /* Slight scale-up on hover */
         }
         .project img {
             max-width: 100%;
@@ -68,6 +76,29 @@
         }
         .project a:hover {
             background-color: #f1c40f; /* Lighter Gold */
+        }
+        .social {
+            position: fixed;
+            bottom: 80px; /* Slightly higher than bottom */
+            right: 20px;
+        }
+        .social a {
+            color: #f1f1f1;
+            font-size: 1.5rem;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        .social a:hover {
+            color: #ffd700; /* Gold */
+        }
+        iframe {
+            display: block;
+            margin: 20px auto;
+            border: none;
+            max-width: 100%;
+            height: 400px; /* Explicit height for better embedding */
+            border-radius: 10px; /* Rounded corners for video */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Drop shadow */
         }
         footer {
             background-color: #002a52; /* Darker Blue */
@@ -88,12 +119,13 @@
     <nav>
         <a href="#about">About</a>
         <a href="#projects">Projects</a>
+        <a href="#video">Video</a>
         <a href="#contact">Contact</a>
     </nav>
     <div class="container">
         <section id="about">
             <h2>About Me</h2>
-            <p>My name is Lucas Meinecke. This is my portfolio showcasing my personal work and projects I have created during my time at Illinois State University. I have presentations in Google Slides, Essays, and more! I hope you enjoy my content and if you have any feedback or comments please view my contact info below. Thank you!</p>
+            <p>My name is Lucas Meinecke. This is my portfolio showcasing my personal work and projects I have created during my time at Illinois State University. I have presentations in Google Slides, essays, and more! I hope you enjoy my content, and if you have any feedback or comments, please view my contact info below. Thank you!</p>
         </section>
         <section id="projects">
             <h2>Projects</h2>
@@ -118,10 +150,17 @@
                 </div>
             </div>
         </section>
+        <section id="video">
+            <h2>Video</h2>
+            <iframe src="https://drive.google.com/file/d/1ZqboUMl0YiSzicakiUTQaCyLI7z-dAHf/preview" allowfullscreen></iframe>
+        </section>
         <section id="contact">
             <h2>Contact Information</h2>
-            <p>If you have any questions or would like to collaborate, feel free to reach out at <a href="mailto:lucas@example.com">lucasm54321@gmail.com</a>.</p>
+            <p>If you have any questions or would like to collaborate, feel free to reach out at <a href="mailto:lucasm54321@gmail.com">lucasm54321@gmail.com</a>.</p>
         </section>
+    </div>
+    <div class="social">
+        <a href="https://discordapp.com/users/thegoldhuman" target="_blank"><i class="fab fa-discord"></i> Discord</a>
     </div>
     <footer>
         <p>&copy; 2024 Lucas A Meinecke. All rights reserved.</p>
