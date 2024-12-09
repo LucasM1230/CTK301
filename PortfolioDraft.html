@@ -13,16 +13,16 @@
             font-family: 'Roboto', Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #001f3f; /* Dark Blue */
+            background-color: #001f3f;
             color: #f1f1f1;
         }
         header {
-            background-color: #002a52; /* Darker Blue */
+            background-color: #002a52;
             padding: 20px;
             text-align: center;
         }
         header h1 {
-            color: #ffd700; /* Gold */
+            color: #ffd700;
             font-size: 2.5rem;
         }
         nav {
@@ -36,88 +36,100 @@
             font-size: 1.2rem;
         }
         nav a:hover {
-            color: #ffd700; /* Gold */
+            color: #ffd700;
         }
         .container {
             max-width: 1200px;
             margin: 0 auto;
             padding: 20px;
         }
-        .projects {
+        .section-container {
+            margin-bottom: 2rem;
+        }
+        .section-container h2 {
+            margin-bottom: 1rem;
+        }
+        .grid-container {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 20px;
         }
-        .project {
-            background-color: #004225; /* Dark Green */
+        .card {
+            background-color: #004225;
             padding: 20px;
             border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Drop shadow */
-            transition: transform 0.3s ease; /* Smooth transition */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
             text-align: center;
-            position: relative; /* Make positioning relative for child elements */
         }
-        .project:hover {
-            transform: scale(1.05); /* Slight scale-up on hover */
-        }
-        .project img {
+        .card img {
             max-width: 100%;
+            height: auto;
+            margin: 0 auto 10px;
             border-radius: 10px;
-            margin-bottom: 15px; /* Space between image and button */
+            cursor: pointer;
         }
-        .project h3 {
-            color: #ffd700; /* Gold */
-            margin: 15px 0;
+        .card h3 {
+            color: #ffd700;
+            margin-bottom: 1rem;
         }
-        .project p {
-            margin: 15px 0;
+        .card p {
+            margin: 1rem 0;
         }
-        .project a {
-            color: #001f3f; /* Dark Blue */
+        .card a {
+            color: #001f3f;
+            background-color: #ffd700;
             text-decoration: none;
-            background-color: #ffd700; /* Gold */
             padding: 10px 15px;
             border-radius: 5px;
-            display: inline-block; /* Ensure proper button display */
-            position: relative;
-            z-index: 1; /* Ensure it sits above other elements */
+            display: inline-block;
         }
-        .project a:hover {
-            background-color: #f1c40f; /* Lighter Gold */
+        .card a:hover {
+            background-color: #f1c40f;
         }
         iframe {
             display: block;
             margin: 20px auto;
             border: none;
-            width: 600px; /* Explicit width */
-            max-width: 100%; /* Responsive */
-            height: 400px; /* Explicit height */
-            border-radius: 10px; /* Rounded corners for video */
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Drop shadow */
-        }
-        footer {
-            background-color: #002a52; /* Darker Blue */
-            text-align: center;
-            padding: 10px;
-            margin-top: 20px;
-        }
-        footer p {
-            margin: 0;
-            color: #f1f1f1;
+            width: 600px;
+            height: 400px;
+            max-width: 100%;
+            border-radius: 10px;
         }
         .social {
             position: fixed;
-            bottom: 80px; /* Slightly higher than bottom */
+            bottom: 20px;
             right: 20px;
+            background-color: #002a52;
+            border-radius: 50%;
+            padding: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
         }
         .social a {
             color: #f1f1f1;
             font-size: 1.5rem;
             text-decoration: none;
-            transition: color 0.3s ease;
         }
         .social a:hover {
-            color: #ffd700; /* Gold */
+            color: #ffd700;
+        }
+        .lightbox {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+        .lightbox img {
+            max-width: 90%;
+            max-height: 90%;
+        }
+        .lightbox:target {
+            display: flex;
         }
     </style>
 </head>
@@ -127,52 +139,114 @@
     </header>
     <nav>
         <a href="#about">About</a>
-        <a href="#projects">Projects</a>
-        <a href="#video">Video</a>
-        <a href="#contact">Contact</a>
+        <a href="#presentations">Presentations</a>
+        <a href="#essays-projects">Essays/Projects</a>
+        <a href="#class-work">Class Work</a>
+        <a href="#video">Coding Video</a>
+        <a href="#video-game">Video Game</a>
     </nav>
     <div class="container">
-        <section id="about">
+        <section id="about" class="section-container">
             <h2>About Me</h2>
             <p>My name is Lucas Meinecke. This is my portfolio showcasing my personal work and projects I have created during my time at Illinois State University. I have presentations in Google Slides, essays, and more! I hope you enjoy my content, and if you have any feedback or comments, please view my contact info below. Thank you!</p>
         </section>
-        <section id="projects">
-            <h2>Projects</h2>
-            <div class="projects">
-                <div class="project">
-                    <img src="creatorlives.jpg" alt="Project 1">
-                    <h3>Project 1: The Designer Is Alive</h3>
+        <section id="presentations" class="section-container">
+            <h2>Presentations</h2>
+            <div class="grid-container">
+                <div class="card">
+                    <img src="creatorlives.jpg" alt="The Designer Is Alive">
+                    <h3>The Designer Is Alive</h3>
                     <p>This project was a group assignment I worked on in my Games & Society class. The presentation discusses the making of the game "Secret Hitler", how the creator's bias affects their game, and more!</p>
-                    <a href="https://docs.google.com/presentation/d/1ifx4QAk4RRuzb7nd6dfz-LQdjkPjpSlR3lqQLt51QA0/edit#slide=id.p" target="_blank">View Presentation</a>
+                    <a href="https://docs.google.com/presentation/d/1ifx4QAk4RRuzb7nd6dfz-LQdjkPjpSlR3lqQLt51QA0/edit" target="_blank">View</a>
                 </div>
-                <div class="project">
-                    <img src="hogthumbsup.jpg" alt="Project 2">
-                    <h3>Project 2: Mental Health in Video Games</h3>
-                    <p>This Google Slides Presentation was used as a visual aid for my speech on Mental Health in Video Games from last semester. I talk about the importance of mental health in gaming, my background in the subject, and more!</p>
-                    <a href="https://docs.google.com/presentation/d/1XKwsFN3e65P5E8tXOnh-268tVObLsfDJHqS6nAaz-TM/edit#slide=id.p" target="_blank">View Presentation</a>
+                <div class="card">
+                    <img src="hogthumbsup.jpg" alt="Mental Health in Video Games">
+                    <h3>Mental Health in Video Games</h3>
+                    <p>This Google Slides Presentation was used as a visual aid for my speech on Mental Health in Video Games from last semester.</p>
+                    <a href="https://docs.google.com/presentation/d/1XKwsFN3e65P5E8tXOnh-268tVObLsfDJHqS6nAaz-TM/edit" target="_blank">View</a>
                 </div>
-                <div class="project">
-                    <img src="animation4.jpg" alt="Project 3">
-                    <h3>Project 3: The Art of Attack On Titan</h3>
-                    <p>This presentation is about my view of the art of the anime Attack On Titan. The art styles used in the anime that I discuss are manga, animation, and music. I feature videos and audios in my presentation to really show my passion for my favorite anime and how much work went into its creation.</p>
-                    <a href="https://docs.google.com/presentation/d/1gOGB1fIDzz2Jv4FKLWl1Qm83XF0aw31tnb-Yb1nO_5E/edit#slide=id.p" target="_blank">View Presentation</a>
+                <div class="card">
+                    <img src="animation4.jpg" alt="The Art of Attack On Titan">
+                    <h3>The Art of Attack On Titan</h3>
+                    <p>This presentation is about my view of the art of the anime Attack On Titan. The art styles used in the anime include manga, animation, and music.</p>
+                    <a href="https://docs.google.com/presentation/d/1gOGB1fIDzz2Jv4FKLWl1Qm83XF0aw31tnb-Yb1nO_5E/edit" target="_blank">View</a>
                 </div>
             </div>
         </section>
-        <section id="video">
-            <h2>Video</h2>
-            <iframe src="https://drive.google.com/file/d/1ZqboUMl0YiSzicakiUTQaCyLI7z-dAHf/preview" allowfullscreen></iframe>
+        <section id="essays-projects" class="section-container">
+            <h2>Essays/Projects</h2>
+            <div class="grid-container">
+                <div class="card">
+                    <h3>Exploring Social Issues Through Gaming: A Look at Detroit: Become Human and World of Warcraft</h3>
+                    <a href="https://drive.google.com/file/d/1yC6K5mbmm1--6VGXHLNDNOZ9MTXCQ2Bz/view?usp=sharing" target="_blank">View</a>
+                </div>
+                <div class="card">
+                    <h3>Reflection Paper: Power, Gender, and Games</h3>
+                    <a href="https://drive.google.com/file/d/1DE_-ZqMoSNkYMezwEHD-l0KtSYX4LP-I/view?usp=sharing" target="_blank">View</a>
+                </div>
+                <div class="card">
+                    <h3>Reflection Paper: Creativity & Video Games</h3>
+                    <a href="https://drive.google.com/file/d/1UaWHgyhl21YO1ptPRHXaOVr2GiMuQ8Rj/view?usp=sharing" target="_blank">View</a>
+                </div>
+                <div class="card">
+                    <h3>Reflection Paper: Diversity & Inclusion in Gaming</h3>
+                    <a href="https://drive.google.com/file/d/16XIQm92aK_tK-sCvaIhJ_bX_Pz1YJ4eB/view?usp=sharing" target="_blank">View</a>
+                </div>
+                <div class="card">
+                    <h3>Analyzing Board Games</h3>
+                    <a href="https://drive.google.com/file/d/1hsX7QAmqRLPD5ezB9cFsI-7TP8nui1SY/view?usp=sharing" target="_blank">View</a>
+                </div>
+            </div>
         </section>
-        <section id="contact">
-            <h2>Contact Information</h2>
-            <p>If you have any questions or would like to collaborate, feel free to reach out at <a href="mailto:lucasm54321@gmail.com">lucasm54321@gmail.com</a>.</p>
+        <section id="class-work" class="section-container">
+            <h2>Class Work</h2>
+            <div class="grid-container">
+                <div class="card">
+                    <h3>100 Artists</h3>
+                    <a href="#lightbox1"><img src="100artists.jpg" alt="100 Artists"></a>
+                </div>
+                <div class="card">
+                    <h3>Daily Habit</h3>
+                    <a href="#lightbox2"><img src="dailyhabit.jpg" alt="Daily Habit"></a>
+                </div>
+                <div class="card">
+                    <h3>Vandalism Art</h3>
+                    <a href="#lightbox3"><img src="vandalism.jpg" alt="Vandalism Art"></a>
+                </div>
+                <div class="card">
+                    <h3>Vandalism Art 2</h3>
+                    <a href="#lightbox4"><img src="remix.jpg" alt="Vandalism Art 2"></a>
+                </div>
+            </div>
         </section>
+        <section id="video" class="section-container">
+            <h2>Coding Video</h2>
+            <iframe src="https://www.youtube.com/embed/D1KQ4dYGIV4" allowfullscreen></iframe>
+        </section>
+        <section id="video-game" class="section-container">
+            <h2>Video Game</h2>
+            <p>This is a Visual Novel game I created with 3 other classmates in my Games & Society class called "Eldermere: Finding Your Voice".</p>
+            <a href="https://lucasm1230.github.io/Eldemere/" target="_blank">Play</a>
+        </section>        
     </div>
-    <div class="social">
-        <a href="https://discordapp.com/users/thegoldhuman" target="_blank"><i class="fab fa-discord"></i> Discord</a>
+    <div id="lightbox1" class="lightbox">
+        <a href="#"><img src="100artists.jpg" alt="100 Artists"></a>
+    </div>
+    <div id="lightbox2" class="lightbox">
+        <a href="#"><img src="dailyhabit.jpg" alt="Daily Habit"></a>
+    </div>
+    <div id="lightbox3" class="lightbox">
+        <a href="#"><img src="vandalism.jpg" alt="Vandalism Art"></a>
+    </div>
+    <div id="lightbox4" class="lightbox">
+        <a href="#"><img src="remix.jpg" alt="Vandalism Art 2"></a>
     </div>
     <footer>
-        <p>&copy; 2024 Lucas A Meinecke. All rights reserved.</p>
+        <p>Contact me at <a href="mailto:lucasm54321@gmail.com" style="color: #ffd700;">lucasm54321@gmail.com</a></p>
+        <p>&copy; 2024 Lucas Meinecke. All rights reserved.</p>
     </footer>
+    <div class="social">
+        <a href="https://discordapp.com/users/thegoldhuman" target="_blank"><i class="fab fa-discord"></i></a>
+    </div>
 </body>
 </html>
